@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 100%;
+            background: #f1f1f1;
+            border-radius: 15px;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #list{
+            list-style-type: none;
+            padding: 0;
+        }
+        #list a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #list li a:hover:not(.header) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+    <input type = "text" id = "searchBar" oninput = "Search((this.value).toLowerCase())" placeholder = "Search..."   name="search2">
+
+</form>
+
+
+
+<ul style="visibility: hidden; margin-right: 300px; margin-left: 300px; " id="list"  class="list-group list-group-numbered"">
+    <li class = "listItem"><a href="baiterek.html"> Baiterek</a>
+    </li>
+    <li class = "listItem"><a href="arch of triumph.html">Arch of Triumph</a>
+    </li>
+    <li class = "listItem"><a href="alzhir.html">"ALZHIR" complex</a>
+    </li>
+    <li class = "listItem"> <a href="kaxakh%20eli.html"> Kazakh Eli</a>
+    </li>
+    <li class = "listItem"><a href="sculpture astana.html"> Sculpture Astana</a>
+
+    </li>
+    <li class = "listItem"><a href="friendship of peoples.html"> Friendship of Peoples</a>
+
+    </li>
+    <li class = "listItem"><a href="25%20years%20of%20independence.html"> 25 years of independence</a>
+
+    </li>
+    <li class = "listItem"><a href="Kazakhstan%20Sun.html"> Kazakhstan Sun</a>
+
+    </li>
+    <li class = "listItem"><a href="kenesary khan.html"> Kenesary khan</a>
+
+    </li>
+    <li class = "listItem"><a href="bogenbay batyr.html"> Bogenbay Batyr</a>
+
+    </li>
+    <li class = "listItem"><a href="abai qunanbaiuly.html"> Abai Qunanbaiuly</a>
+
+    </li>
+    <li class = "listItem"><a href="saken seifullin.html"> Saken Seifullin</a>
+
+    </li>
+    <li class = "listItem"><a href="bauyrzhan momyshuly.html"> Bauyrzhan Momyshuly</a>
+
+
+    </li>
+    <li class = "listItem"><a href="Alexander Pushkin.html"> Alexander Pushkin</a>
+
+
+    </li>
+    <li class = "listItem"><a href="Aliya%20Moldagulova.html"> Aliya Moldagulova</a>
+
+
+    </li>
+    <li class = "listItem"><a href="Al-Farabi.html"> Al-Farabi</a>
+
+
+    </li>
+    <li class = "listItem"><a href="Kanysh%20Satpayev.html"> Kanysh Satpayev</a>
+
+
+    </li>
+</ul>
+
+
+<script>
+    function Search(item){
+        document.getElementById("list").style.visibility = "visible";
+        var collection = document.getElementsByClassName("listItem");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+                if(document.getElementById("searchBar").value.length == 0)
+                {
+                    document.getElementById("list").style.visibility = "hidden";
+                }
+            } else {
+                collection[i].style.display = "none";
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<DOCTYPE HTML>
+<html>
+<body>
+<h1>Collection of elements:</h1>
+<input type = "text" id = "searchBar" oninput = "Search((this.value).toLowerCase())" placeholder = "Search...">
+<br><br>
+<ul style="visibility: hidden" id="list">
+    <li class = "listItem">Baiterek
+    </li>
+    <li class = "listItem">Arch of Triumph
+    </li>
+    <li class = "listItem">"ALZHIR" complex
+    </li>
+    <li class = "listItem">Kazakh Eli
+    </li>
+    <li class = "listItem">Sculpture Astana
+
+    </li>
+    <li class = "listItem">Friendship of Peoples
+
+    </li>
+    <li class = "listItem">25 years of independence
+
+    </li>
+    <li class = "listItem">Kazakhstan Sun
+
+    </li>
+    <li class = "listItem">Kenesary khan
+
+    </li>
+    <li class = "listItem">Bogenbay Batyr
+
+    </li>
+    <li class = "listItem">Abai Qunanbaiuly
+
+    </li>
+    <li class = "listItem">Saken Seifullin
+
+    </li>
+    <li class = "listItem">Bauyrzhan Momyshuly
+
+
+    </li>
+    <li class = "listItem">Alexander Pushkin
+
+
+    </li>
+    <li class = "listItem">Aliya Moldagulova
+
+
+    </li>
+    <li class = "listItem">Al-Farabi
+
+
+    </li>
+    <li class = "listItem">Kanysh Satpayev
+
+
+    </li>
+</ul>
+<script>
+    function Search(item){
+        document.getElementById("list").style.visibility = "visible";
+        var collection = document.getElementsByClassName("listItem");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+                if(document.getElementById("searchBar").value.length == 0)
+                {
+                    document.getElementById("list").style.visibility = "hidden";
+                }
+            } else {
+                collection[i].style.display = "none";
+            }
+        }
+    }
+
+    f
+</script>
+</body>
+</html>
